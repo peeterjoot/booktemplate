@@ -1,0 +1,10 @@
+sub booktemplateMeta
+{
+my @booktemplate =
+(
+) ; # @booktemplate
+
+return @booktemplate ;
+}
+
+1 ;

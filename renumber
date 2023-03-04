@@ -1,0 +1,2 @@
+#../latex/bin/lgrep 2Dcylindrical.tex | tee o ; . ./o
+#perl -p -i ../latex/bin/latexRegex.pl 2Dcylindrical.tex
