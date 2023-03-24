@@ -64,10 +64,6 @@ DO_SPELL_CHECK := $(shell cat spellcheckem.txt)
 include ../latex/make.rules
 
 $(THISBOOK).pdf :: parameters.sty
-#all :: $(THISBOOK).pdf
-#all :: ellipticalWaves.pdf
-#all :: junk.pdf
-#all :: maxwells.pdf
 
 eps:
 	@echo $(EPS_FILES)
@@ -89,15 +85,6 @@ spellcheck: $(patsubst %.tex,%.sp,$(filter-out $(DONT_SPELL_CHECK),$(DO_SPELL_CH
 %.sp : %.tex
 	spellcheck $^
 	touch $@
-
-#classicthesis.sty: ../latex/classicthesis/classicthesis.sty
-#	cp ../latex/classicthesis/classicthesis.sty .
-
-#.PHONY: copy
-#copy : $(HOME)/Dropbox/$(THISDIR)/$(THISBOOK).pdf
-#
-#$(HOME)/Dropbox/$(THISDIR)/$(THISBOOK).pdf : $(THISBOOK).pdf
-#	cp $^ $@
 
 mmacells/mmacells.sty:
 	git clone https://github.com/jkuczm/mmacells
